@@ -14,7 +14,17 @@ public class Design {
 
     static int [] ngl(int A[])
     {
+        Stack<Integer> st=new Stack<>();
+        int ngl[]=new int[A.length];
+        ngl[0]=-1;
+        st.push(0);  // pushing the indexes
 
+        for(int i=1;i<A.length;i++)
+        {
+            while(!st.isEmpty() && A[st.peek()]<=A[i])
+            {
+                st.pop();
+            }
 
             if(!st.isEmpty())
             {
