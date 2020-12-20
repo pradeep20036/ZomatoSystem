@@ -7,6 +7,7 @@ public class Design {
 
         int arr[]={4,5,2,10,8};
         int ans[]=ngl(arr);
+        int p[];
 
         for(int i: ans)
             System.out.print(i+" ");
